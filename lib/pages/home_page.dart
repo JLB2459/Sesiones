@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_app/pages/U2-S5/sesion5_page.dart';
+import 'package:practice_app/pages/U2-S6/sesion6_page.dart';
 import 'package:practice_app/pages/widgets/my_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,6 +27,18 @@ class HomePage extends StatelessWidget {
                   onPressed: () {
                     final route = MaterialPageRoute(
                       builder: (BuildContext context) => const Sesion5Page(),
+                    );
+                    Navigator.push(context, route);
+                  },
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                MyButton(
+                  text: 'Trabajo Sesión 6',
+                  onPressed: () {
+                    final route = MaterialPageRoute(
+                      builder: (BuildContext context) => const Sesion6Page(),
                     );
                     Navigator.push(context, route);
                   },

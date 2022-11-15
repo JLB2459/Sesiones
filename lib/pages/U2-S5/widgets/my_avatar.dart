@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
 class MyAvatar extends StatelessWidget {
+  final double size;
   final String asset;
   const MyAvatar({
     Key? key,
+    this.size = 80,
     required this.asset,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      width: 80,
+      height: size,
+      width: size,
       decoration: BoxDecoration(
         boxShadow: boxShadow,
         border: Border.all(
