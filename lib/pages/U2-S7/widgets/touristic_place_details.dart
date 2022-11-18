@@ -25,6 +25,7 @@ class TouristicPlaceDetails extends StatelessWidget {
             fontSize: isPortrait ? 24 : 20,
             fontWeight: FontWeight.bold,
             letterSpacing: 6,
+            color: Colors.black,
           ),
           textAlign: TextAlign.center,
         ),
@@ -32,7 +33,7 @@ class TouristicPlaceDetails extends StatelessWidget {
           child: Text(
             // '',
             content,
-            maxLines: isPortrait ? 5 : 3,
+            maxLines: isPortrait ? 4 : 3,
             style: GoogleFonts.mulish(
               color: const Color.fromARGB(255, 66, 66, 66),
               fontSize: isPortrait ? 15 : 14,

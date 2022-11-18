@@ -13,8 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Practice App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
+      theme: ThemeData.dark().copyWith(
+        splashColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        primaryColor: Colors.black,
+        scaffoldBackgroundColor: Colors.black,
+        useMaterial3: true,
       ),
       home: const HomePage(),
     );
