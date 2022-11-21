@@ -3,6 +3,7 @@ import 'package:practice_app/pages/U2-S5/sesion5_page.dart';
 import 'package:practice_app/pages/U2-S6/sesion6_page.dart';
 import 'package:practice_app/pages/U2-S7/sesion7_page.dart';
 import 'package:practice_app/pages/U2-S8/sesion8_page.dart';
+import 'package:practice_app/pages/U2-S9/widgets/sesion9_page.dart';
 import 'package:practice_app/pages/widgets/my_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -67,6 +68,18 @@ class HomePage extends StatelessWidget {
                   onPressed: () {
                     final route = MaterialPageRoute(
                       builder: (BuildContext context) => const Sesion8Page(),
+                    );
+                    Navigator.push(context, route);
+                  },
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                MyButton(
+                  text: 'Trabajo Sesión 9',
+                  onPressed: () {
+                    final route = MaterialPageRoute(
+                      builder: (BuildContext context) => const S9HomePage(),
                     );
                     Navigator.push(context, route);
                   },
