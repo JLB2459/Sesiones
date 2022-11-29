@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_app/pages/U2-S11/login_provider.dart';
-import 'package:practice_app/pages/home_page.dart';
 import 'package:practice_app/routes/routes.dart';
+import 'package:practice_app/services/service_auth.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -12,6 +12,9 @@ void main() {
       providers: [
         ChangeNotifierProvider(
           create: (_) => LoginProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => AuthService(),
         )
       ],
       child: const MyApp(),
