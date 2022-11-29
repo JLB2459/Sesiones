@@ -56,4 +56,15 @@ class AuthService extends ChangeNotifier {
       return decodeResponse['error']['message'];
     }
   }
+
+  //Logout
+  Future logout() async {
+    await storage.delete(key: 'token');
+    return;
+  }
+
+  //verify token
+  Future<String> readToken() async {
+    return await storage.read(key: 'token') ?? '';
+  }
 }

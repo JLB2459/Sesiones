@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 
 import 'package:practice_app/pages/U2-S13/login_provider.dart';
 import 'package:practice_app/routes/routes.dart';
+import 'package:practice_app/services/custom_snackbar.dart';
 import 'package:practice_app/services/service_auth.dart';
 import 'package:provider/provider.dart';
 
@@ -153,13 +154,16 @@ class _LoginFormState extends State<_LoginForm> {
                         );
 
                         if (errorMessage == null) {
+                          CustomSnackBar.showSnackBar('Bienvenido');
                           // ignore: use_build_context_synchronously
                           Navigator.pushReplacementNamed(
                             context,
-                            MyRoutes.homeS11,
+                            MyRoutes.homeS13,
                           );
                         } else {
                           loginProvider2.isLoading = false;
+                          CustomSnackBar.showSnackBar(
+                              'Correo y/o contraseña incorrectos');
                         }
                       },
                 shape: RoundedRectangleBorder(

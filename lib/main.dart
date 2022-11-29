@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_app/pages/U2-S11/login_provider.dart';
 import 'package:practice_app/routes/routes.dart';
+import 'package:practice_app/services/custom_snackbar.dart';
 import 'package:practice_app/services/service_auth.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Practice App',
+
       debugShowCheckedModeBanner: false,
+      scaffoldMessengerKey: CustomSnackBar.msgKey,
       theme: ThemeData.dark().copyWith(
         splashColor: Colors.transparent,
         hoverColor: Colors.transparent,
@@ -40,7 +43,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const HomePage(),
       onGenerateRoute: MyRoutes.generateRoute,
-      initialRoute: MyRoutes.home,
+      //for s13 change to home
+      initialRoute: MyRoutes.verify,
     );
   }
 }
